@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss"
+import { Switch, Route } from "react-router-dom"
+import LoginPage from "./pages/Login/Login.page"
+import { setupAxios } from "./config/axios"
 
 function App() {
+  setupAxios()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+        <Route path="/app"></Route>
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
