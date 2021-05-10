@@ -8,6 +8,7 @@ import { routerMiddleware } from "connected-react-router"
 import rootReducer from "./rootReducer"
 import history from "../history"
 import { watchUserSaga } from "./User/User.sagas"
+import { watchNotesSaga } from "./Notes/Notes.sagas"
 
 const sagaMiddleware = createSagaMiddleware()
 const connectedRouterMiddleware = routerMiddleware(history)
@@ -30,3 +31,4 @@ export const store = createStore(persistedReducer, applyMiddleware(...middleware
 export const persistor = persistStore(store)
 
 sagaMiddleware.run(watchUserSaga)
+sagaMiddleware.run(watchNotesSaga)

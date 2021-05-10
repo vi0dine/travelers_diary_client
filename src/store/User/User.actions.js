@@ -11,12 +11,21 @@ export const authenticateUser = (accessToken) => {
   }
 }
 
-export const authenticateUserSuccess = (id, email, accessToken, role) => {
+export const authenticateUserSuccess = (
+  id,
+  email,
+  accessToken,
+  client,
+  expiry,
+  role
+) => {
   return {
     type: AUTHENTICATE_USER_SUCCESS,
     id,
     email,
     accessToken,
+    client,
+    expiry,
     role,
   }
 }

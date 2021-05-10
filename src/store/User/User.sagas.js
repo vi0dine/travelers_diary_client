@@ -12,7 +12,7 @@ function* authenticateUser(action) {
   try {
     const response = yield call(() =>
       axios.request({
-        url: "/v1/auth/request",
+        url: "/auth/request",
         data: {
           access_token: action.accessToken,
         },
@@ -20,13 +20,13 @@ function* authenticateUser(action) {
       })
     )
 
-    console.log(response.headers)
-
     yield put(
       authenticateUserSuccess(
         response.headers["id"],
         response.headers["email"],
         response.headers["access-token"],
+        response.headers["client"],
+        response.headers["expiry"],
         response.headers["role"]
       )
     )

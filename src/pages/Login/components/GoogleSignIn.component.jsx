@@ -14,6 +14,7 @@ const GoogleSignIn = () => {
       "748789547202-8la3h3vrnmqr4dfau566enc8qtosn85u.apps.googleusercontent.com",
     cookiePolicy: "single_host_origin",
     redirectUri: "http://localhost:3000",
+    scope: "email profile",
     onFailure: (res) => {
       console.log(res)
     },

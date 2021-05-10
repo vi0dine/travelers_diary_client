@@ -2,6 +2,7 @@ import "./App.scss"
 import { Switch, Route } from "react-router-dom"
 import LoginPage from "./pages/Login/Login.page"
 import { setupAxios } from "./config/axios"
+import Dashboard from "./pages/Dashboard/Dashboard.page"
 
 function App() {
   setupAxios()
@@ -12,7 +13,9 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
-        <Route path="/app"></Route>
+        <Route path="/">
+          <Dashboard />
+        </Route>
       </Switch>
     </div>
   )

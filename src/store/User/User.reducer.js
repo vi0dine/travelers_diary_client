@@ -4,7 +4,8 @@ const INITIAL_STATE = {
   id: null,
   role: null,
   accessToken: null,
-  refreshToken: null,
+  client: null,
+  expiry: null,
   email: null,
 }
 
@@ -15,8 +16,9 @@ export const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         id: action.id,
         email: action.email,
+        client: action.client,
+        expiry: action.expiry,
         accessToken: action.accessToken,
-        refreshToken: action.refreshToken,
         role: action.role,
       }
     default:
