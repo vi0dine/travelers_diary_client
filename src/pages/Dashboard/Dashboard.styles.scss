@@ -1,0 +1,12 @@
+.Dashboard {
+  &__AddNoteButton {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: #61dafb;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

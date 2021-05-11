@@ -1,0 +1,31 @@
+.NoteForm {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &__Item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__Label {
+    margin: 8px 0;
+  }
+  &__Input {
+    height: 30px;
+    font-size: 12pt;
+  }
+
+  &__SubmitButton {
+    margin-top: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background-color: #61dafb;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
